@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "projects": {
+    "ipaltex": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "tsConfig": "tsconfig.app.json",
+            "polyfills": [
+              "zone.js"
+            ],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "outputPath": "dist/ipaltex"
+          }
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "ipaltex:build"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "475bd109-b57e-4173-9529-a1e3ea7f60f1"
+  }
+}

@@ -1,0 +1,3 @@
+<a class="product-card" [routerLink]="['/producto',product.id]">
+ <img [src]="product.image" [alt]="product.name"><div class="product-info"><small>{{product.code}} · {{product.category}}</small><h3>{{product.name}}</h3><p>{{product.material}}</p><div class="tags">@for(c of product.colors;track c){<span>{{c}}</span>}</div><div class="price-line"><strong>S/ {{product.price.toFixed(2)}} <small>/ m</small></strong><small>{{data.total(product.id)}} m disponibles</small></div></div>
+</a>
